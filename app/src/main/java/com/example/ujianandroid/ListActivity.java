@@ -17,6 +17,8 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
+        // COBA
+
         ListView lvNama = (ListView) findViewById(R.id.lvNama);
 
         ArrayList<String> daftar_nama = getIntent().getExtras().getStringArrayList("daftar_nama");
