@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         EditText edNamaDepan = (EditText) findViewById(R.id.edNamaDepan);
         EditText edNamaBelakang = (EditText) findViewById(R.id.edNamaBelakang);
         Button btnSimpan = (Button) findViewById(R.id.btnSimpan);
@@ -29,12 +31,13 @@ public class MainActivity extends AppCompatActivity {
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String isian_nama_depan = edNamaDepan.getText().toString();
                 String isian_nama_belakang = edNamaBelakang.getText().toString();
 
-                if(isian_nama_depan.isEmpty()){
+                if (isian_nama_depan.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Isian masih kosong", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     String nama_lengkap = isian_nama_depan.concat(" ").concat(isian_nama_belakang);
                     daftar_nama.clear();
                     daftar_nama.add(nama_lengkap);
@@ -43,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
                     intent_list.putStringArrayListExtra("daftar_nama", daftar_nama);
                     startActivity(intent_list);
                 }
+
             }
+
         });
     }
 }
